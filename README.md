@@ -1,20 +1,48 @@
 # eslint-plugin-pack
 
-ESLint плагин с предустановленными конфигурациями для TypeScript, React и других технологий.
+ESLint plugin with predefined configurations for TypeScript, React, and other technologies. Compatible with ESLint v9.
 
-## Установка
+## Installation
 
 ```bash
 npm install --save-dev eslint eslint-plugin-pack
-# или
+# or
 yarn add --dev eslint eslint-plugin-pack
-# или
+# or
 pnpm add -D eslint eslint-plugin-pack
 ```
 
-## Использование
+## Usage
 
-### Базовая конфигурация
+### Flat Config (ESLint v9)
+
+```js
+// eslint.config.js
+const packPlugin = require('eslint-plugin-pack');
+
+module.exports = [
+  // Basic configuration
+  packPlugin.configs.recommended,
+  
+  // Or TypeScript configuration
+  // packPlugin.configs.typescript,
+  
+  // Or React configuration
+  // packPlugin.configs.react,
+  
+  // Or full configuration (all rules)
+  // packPlugin.configs.all,
+  
+  // Your custom rules
+  {
+    rules: {
+      // Your custom rules here
+    }
+  }
+];
+```
+
+### Legacy Config (ESLint v8 and below)
 
 ```js
 // .eslintrc.js
@@ -23,70 +51,43 @@ module.exports = {
 };
 ```
 
-### TypeScript конфигурация
-
-```js
-// .eslintrc.js
-module.exports = {
-  extends: ['plugin:pack/typescript']
-};
-```
-
-### React конфигурация
-
-```js
-// .eslintrc.js
-module.exports = {
-  extends: ['plugin:pack/react']
-};
-```
-
-### Полная конфигурация (все правила)
-
-```js
-// .eslintrc.js
-module.exports = {
-  extends: ['plugin:pack/all']
-};
-```
-
-## Доступные конфигурации
+## Available Configurations
 
 ### `pack/recommended`
 
-Базовый набор правил ESLint с настройками Prettier.
+Basic set of ESLint rules with Prettier settings.
 
 ### `pack/typescript`
 
-Правила для TypeScript проектов, включая:
-- Правила именования (PascalCase для типов, UPPER_CASE для enum)
-- Проверка исчерпывающих switch
-- Обработка обещаний (promises)
-- И другие полезные правила для TypeScript
+Rules for TypeScript projects, including:
+- Naming conventions (PascalCase for types, UPPER_CASE for enums)
+- Exhaustive switch checks
+- Promise handling
+- And other useful rules for TypeScript
 
 ### `pack/react`
 
-Правила для React проектов, включая:
-- Правила доступности (a11y)
-- Правила для хуков React
-- Проверка типов для кнопок
+Rules for React projects, including:
+- Accessibility (a11y) rules
+- React hooks rules
+- Button type checking
 
 ### `pack/all`
 
-Полный набор правил, включающий все вышеперечисленные конфигурации, а также:
+Complete set of rules, including all the above configurations, as well as:
 - CSS Modules
 - Storybook
-- Import правила
+- Import rules
 
-## Игнорируемые файлы
+## Ignored Files
 
-Плагин автоматически игнорирует следующие файлы и директории:
-- Стандартные файлы сборки и конфигурации (build/, dist/, *.d.ts и т.д.)
-- Файлы пакетных менеджеров:
+The plugin automatically ignores the following files and directories:
+- Standard build and configuration files (build/, dist/, *.d.ts, etc.)
+- Package manager files:
   - npm: package-lock.json, .npmrc, npm-debug.log*, .npm/
   - yarn: yarn-debug.log*, yarn-error.log*
   - pnpm: pnpm-lock.yaml, .pnpm-store/
 
-## Лицензия
+## License
 
 MIT

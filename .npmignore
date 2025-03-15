@@ -8,7 +8,7 @@ tests
 .prettierrc
 .vscode
 *.log
-# pnpm и npm паттерны
+
 .pnpm-store/
 pnpm-lock.yaml
 package-lock.json
