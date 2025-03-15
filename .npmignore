@@ -1,14 +1,16 @@
+.git
+.github
 node_modules
-.DS_Store
-*.log
-coverage
-.nyc_output
+tests
+.eslintrc.js
+.gitignore
+.npmrc
+.prettierrc
 .vscode
-.idea
+*.log
 # pnpm и npm паттерны
 .pnpm-store/
 pnpm-lock.yaml
 package-lock.json
-.npmrc
 npm-debug.log*
-.npm/
+.npm/ 
