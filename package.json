@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-pack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint plugin with predefined configurations for TypeScript, React and more",
   "main": "lib/index.js",
   "homepage": "https://github.com/mz-evgeny/eslint-plugin-pack#readme",
