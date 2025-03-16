@@ -15,9 +15,9 @@ npm install eslint-plugin-pack --save-dev
 In your `eslint.config.mjs`:
 
 ```js
-const eslintPluginPack = require('eslint-plugin-pack');
+import pack from "eslint-plugin-pack";
 
-module.exports = [
+export default [
   ...eslintPluginPack.configs.recommended,
   // Your additional settings...
 ];
@@ -28,9 +28,9 @@ module.exports = [
 If you're using Next.js, you can add additional rules:
 
 ```mjs
-const eslintPluginPack = require('eslint-plugin-pack');
+import pack from "eslint-plugin-pack";
 
-module.exports = [
+export default [
   ...eslintPluginPack.configs.recommended,
   ...eslintPluginPack.configs.next,
   // Your additional settings...
