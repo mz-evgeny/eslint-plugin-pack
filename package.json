@@ -1,8 +1,7 @@
 {
   "name": "eslint-plugin-pack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ESLint plugin with predefined configurations for TypeScript, React and more",
-  "main": "lib/index.js",
   "homepage": "https://github.com/mz-evgeny/eslint-plugin-pack#readme",
   "repository": {
     "type": "git",
@@ -13,44 +12,24 @@
   },
   "author": "Evgeny Moroz",
   "license": "MIT",
-  "files": [
-    "lib"
-  ],
-  "scripts": {
-    "test": "mocha tests --recursive",
-    "lint": "eslint .",
-    "prepublishOnly": "npm run test"
-  },
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin",
-    "typescript",
-    "react"
-  ],
-  "peerDependencies": {
-    "eslint": ">=9.0.0"
-  },
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@eslint/js": "^9.22.0",
+    "@next/eslint-plugin-next": "^15.2.2",
     "@typescript-eslint/parser": "^8.26.1",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-css-modules": "^2.12.0",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-css": "^0.11.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-storybook": "^0.11.4"
+    "globals": "^13.24.0",
+    "typescript-eslint": "^8.26.1"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "eslint": "^9.22.0",
-    "mocha": "^11.1.0",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=20.0.0"
   }
 }

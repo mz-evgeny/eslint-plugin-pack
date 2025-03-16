@@ -1,93 +1,48 @@
 # eslint-plugin-pack
 
-ESLint plugin with predefined configurations for TypeScript, React, and other technologies. Compatible with ESLint v9.
+ESLint plugin with recommended rules for modern development.
 
 ## Installation
 
 ```bash
-npm install --save-dev eslint eslint-plugin-pack
-# or
-yarn add --dev eslint eslint-plugin-pack
-# or
-pnpm add -D eslint eslint-plugin-pack
+npm install eslint-plugin-pack --save-dev
 ```
 
 ## Usage
 
-### Flat Config (ESLint v9)
+### Basic Configuration
+
+In your `eslint.config.js`:
 
 ```js
-// eslint.config.js
-const packPlugin = require('eslint-plugin-pack');
+const eslintPluginPack = require('eslint-plugin-pack');
 
 module.exports = [
-  // Basic configuration
-  packPlugin.configs.recommended,
-  
-  // Or TypeScript configuration
-  // packPlugin.configs.typescript,
-  
-  // Or React configuration
-  // packPlugin.configs.react,
-  
-  // Or full configuration (all rules)
-  // packPlugin.configs.all,
-  
-  // Your custom rules
-  {
-    rules: {
-      // Your custom rules here
-    }
-  }
+  eslintPluginPack.configs.recommended,
+  // Your additional settings...
 ];
 ```
 
-### Legacy Config (ESLint v8 and below)
+### For Next.js Projects
+
+If you're using Next.js, you can add additional rules:
 
 ```js
-// .eslintrc.js
-module.exports = {
-  extends: ['plugin:pack/recommended']
-};
+const eslintPluginPack = require('eslint-plugin-pack');
+
+module.exports = [
+  eslintPluginPack.configs.recommended,
+  eslintPluginPack.configs.next,
+  // Your additional settings...
+];
 ```
 
-## Available Configurations
+## Included Rules
 
-### `pack/recommended`
+The plugin includes recommended rules for:
 
-Basic set of ESLint rules with Prettier settings.
-
-### `pack/typescript`
-
-Rules for TypeScript projects, including:
-- Naming conventions (PascalCase for types, UPPER_CASE for enums)
-- Exhaustive switch checks
-- Promise handling
-- And other useful rules for TypeScript
-
-### `pack/react`
-
-Rules for React projects, including:
-- Accessibility (a11y) rules
-- React hooks rules
-- Button type checking
-
-### `pack/all`
-
-Complete set of rules, including all the above configurations, as well as:
-- CSS Modules
-- Storybook
-- Import rules
-
-## Ignored Files
-
-The plugin automatically ignores the following files and directories:
-- Standard build and configuration files (build/, dist/, *.d.ts, etc.)
-- Package manager files:
-  - npm: package-lock.json, .npmrc, npm-debug.log*, .npm/
-  - yarn: yarn-debug.log*, yarn-error.log*
-  - pnpm: pnpm-lock.yaml, .pnpm-store/
-
-## License
-
-MIT
+- JavaScript/TypeScript
+- React and React Hooks
+- JSX accessibility (a11y)
+- CSS modules
+- Next.js (optional)
