@@ -12,13 +12,13 @@ npm install eslint-plugin-pack --save-dev
 
 ### Basic Configuration
 
-In your `eslint.config.js`:
+In your `eslint.config.mjs`:
 
 ```js
 const eslintPluginPack = require('eslint-plugin-pack');
 
 module.exports = [
-  eslintPluginPack.configs.recommended,
+  ...eslintPluginPack.configs.recommended,
   // Your additional settings...
 ];
 ```
@@ -27,12 +27,12 @@ module.exports = [
 
 If you're using Next.js, you can add additional rules:
 
-```js
+```mjs
 const eslintPluginPack = require('eslint-plugin-pack');
 
 module.exports = [
-  eslintPluginPack.configs.recommended,
-  eslintPluginPack.configs.next,
+  ...eslintPluginPack.configs.recommended,
+  ...eslintPluginPack.configs.next,
   // Your additional settings...
 ];
 ```
