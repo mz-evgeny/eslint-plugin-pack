@@ -2,6 +2,19 @@
   "name": "eslint-plugin-pack",
   "version": "1.0.2",
   "description": "ESLint plugin with predefined configurations for TypeScript, React and more",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "typescript",
+    "react",
+    "nextjs",
+    "css",
+    "a11y",
+    "jsx",
+    "lint",
+    "config"
+  ],
   "homepage": "https://github.com/mz-evgeny/eslint-plugin-pack#readme",
   "repository": {
     "type": "git",
@@ -22,7 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "globals": "^13.24.0",
+    "globals": "^16.0.0",
     "typescript-eslint": "^8.26.1"
   },
   "peerDependencies": {
@@ -31,5 +44,6 @@
   },
   "engines": {
     "node": ">=20.0.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
