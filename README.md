@@ -15,10 +15,12 @@ npm install eslint-plugin-pack --save-dev
 In your `eslint.config.mjs`:
 
 ```js
-import pack from "eslint-plugin-pack";
+import pack from 'eslint-plugin-pack';
+
+const { configs } = pack;
 
 export default [
-  ...eslintPluginPack.configs.recommended,
+  ...configs.recommended,
   // Your additional settings...
 ];
 ```
@@ -27,12 +29,14 @@ export default [
 
 If you're using Next.js, you can add additional rules:
 
-```mjs
-import pack from "eslint-plugin-pack";
+```js
+import pack from 'eslint-plugin-pack';
+
+const { configs } = pack;
 
 export default [
-  ...eslintPluginPack.configs.recommended,
-  ...eslintPluginPack.configs.next,
+  ...configs.recommended,
+  ...configs.next,
   // Your additional settings...
 ];
 ```
