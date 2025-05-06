@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-pack",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "ESLint plugin with predefined configurations for TypeScript, React and more",
   "keywords": [
     "eslint",
